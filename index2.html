@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="node_modules/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="node_modules/slick-carousel/slick/slick-theme.css"
+    />
+
+  </head>
+  <body>
+    <div id="root" class="hidden"></div>
+    <!-- Header - start -->
+    <header>
+      <!-- Main Secondary Nav - start -->
+      <section id="secondaryNav" class="hidden sm:block px-0 py-2.5 border-b bg-[#f8f7f6]">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+          <!-- Group A - start-->
+          <div class="flex text-[0.8rem]">
+            <!-- link -->
+            <div class="pr-[1.2rem]">
+              <i class="fa-solid fa-location-dot pr-0.5"></i>
+              <span class="">3134 Doe Meadow Drive</span>
+            </div>
+
+            <!-- link 2 -->
+            <div class="pr-[1.2rem]">
+              <i class="fa-solid fa-envelope pr-0.5"></i>
+              <span class="">dentalcare@gmail.com</span>
+            </div>
+          </div>
+
+
+          <!-- Phone Section start -->
+          <div class="flex text-[0.8rem]">
+            <a
+              href="tel:7733337890"
+              class="
+                inline-block
+                px-4
+                py-1
+                font-md
+                border-2 border-green-500
+                text-green-500
+                rounded-md
+                transition
+                duration-300
+                hover:bg-green-500 hover:text-white
+              "
+            >
+              <i class="fas fa-phone"></i>
+              <span class="ml-1">773-333-7890</span>
+            </a>
+          </div>
+          <!-- Phone Section end -->
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <nav id="mainNav" class="bg-[#2a527b] relative">
+        <div
+          class="container px-4 py-6 mx-auto flex justify-between items-center"
+        >
+          <!-- Logo -->
+          <div class="text-white text-2xl font-bold uppercase">Dental Care</div>
+
+          <!-- Navigation Links -->
+          <div class="hidden sm:block space-x-4 text-md">
+            <a href="#" class="text-white hover:text-gray-300">About</a>
+            <a href="#" class="text-white hover:text-gray-300">Services</a>
+            <a href="#" class="text-white hover:text-gray-300">Work</a>
+            <a href="#" class="text-white hover:text-gray-300">Contact Us</a>
+          </div>
+
+          <!-- Call to Action Button -->
+          <div>
+            <a
+              href="#"
+              class="
+                bg-[#039db3]
+                text-white
+                px-4
+                py-2
+                hidden
+                sm:block
+                rounded-md
+                transition
+                duration-300
+                hover:bg-[#03a7b3]
+              "
+            >
+              Make an Appointment
+            </a>
+          </div>
+
+          <!-- Hamburger Icon -->
+        <button
+          id="menu-btn"
+          class="block hamburger md:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+
+       <!-- Mobile Menu -->
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="absolute flex-col items-center hidden self-end py-8 space-y-6 font-bold bg-[#2a527b] sm:w-auto sm:self-center left-1 right-1 drop-shadow-md z-[999] text-white"
+        >
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Team</a>
+          <a href="#">Testimonals</a>
+          <a href="#">Consultation</a>
+          <a
+              href="#"
+              class="
+                bg-[#039db3]
+                text-white
+                px-4
+                py-2
+                rounded-md
+                transition
+                duration-300
+                hover:bg-[#03a7b3]
+              "
+            >
+              Make an Appointment
+            </a>
+            <a
+              href="#"
+              class="
+                bg-green-500
+                text-white
+                px-4
+                py-2
+                rounded-md
+                transition
+                duration-300
+                hover:bg-green-700
+              "
+            >
+             <i class="fas fa-phone"></i>
+              <span>Give Us A Call</span> 
+            </a>
+        </div>
+      </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <!-- Header - end -->
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-[75vh] flex items-center">
+      <!-- Background Image with Overlay -->
+      <div
+        class="absolute inset-0 bg-cover bg-center z-0"
+        style="background-image: url('img/family-dental-care.jpg')"
+      >
+        <div class="absolute inset-0 bg-blue-500 opacity-40 lg:hidden"></div>
+      </div>
+
+      <!-- Content Container -->
+      <div class="container px-4 mx-auto z-10">
+        <!-- Title and Description -->
+        <div class="lg:flex justify-between items-center">
+          <div class="lg:w-1/2">
+            <h1
+              class="
+                text-4xl
+                lg:text-6xl
+                font-bold
+                text-white
+                leading-tight
+                mb-4
+              "
+            >
+              Family Dental Care
+            </h1>
+            <p class="text-white text-lg lg:text-xl mb-6">
+              Welcome to Family Dental Care, where we prioritize your family's
+              oral health. Our dedicated team is committed to providing
+              top-notch dental services, ensuring smiles that are not only
+              healthy but also beautiful.
+            </p>
+            <a
+              href="#"
+              class="
+                py-3
+                px-10
+                rounded-full
+                border border-white text-white hover:bg-white hover:text-[#2a527b] transition-all duration-300
+              "
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Office Information Hours, Location, ETC. -->
+    <section id="office-info" class="py-8 lg:py-12">
+      <div class="container mx-auto px-4 flex flex-col lg:flex-row">
+        <div class="lg:w-3/5 lg:pr-6">
+          <h2 class="text-lg lg:text-5xl pb-4 text-[#2a527b] font-md">
+            Caring for the growing dental needs of our community.
+          </h2>
+          <p class="font-light text-[#212427] pb-4">
+            For more than a decade, individuals from all walks of life have
+            discovered solutions at Dental Care Clinic. Our main clinic is
+            situated in the heart of the city, and we also operate various
+            programs to cater to a range of dental care needs. Here are some
+            reasons why over a million people each year choose Dental Care
+            Clinic for their oral health:
+          </p>
+          <ul class="list-disc text-[#212427] pl-4">
+            <li>Experienced dentists in every specialty</li>
+            <li>Streamlined approach to managing your dental projects</li>
+            <li>
+              Satisfied patients and an unparalleled dental care experience
+            </li>
+          </ul>
+        </div>
+        <div class="lg:w-2/5 lg:pl-20 lg:flex lg:flex-col md:px-8">
+          <h3
+            class="
+              lg:text-2xl
+              text-[#2a527b]
+              pb-4
+              text-center
+              lg:text-left
+              pt-12
+              lg:pt-0
+            "
+          >
+            Working Hours
+          </h3>
+          <p class="font-light pb-4 text-center lg:text-left">
+            Caring for patients, every day of the week.
+          </p>
+          <table class="pb-4 w-full text-center px-8">
+            <tr class="bg-[#d6e8f5] border-b-4 border-solid border-[#f3f8fb]">
+              <td class="py-2 px-2 lg:px4">Monday - Friday</td>
+              <td class="py-2 px-2 lg:px4">9:00am - 6:00pm</td>
+            </tr>
+            <tr class="bg-[#d6e8f5] border-b-4 border-solid border-[#f3f8fb]">
+              <td class="py-2 px-2 lg:px4 lg:py-2">Monday - Friday</td>
+              <td class="py-2 px-2 lg:px4 lg:py-2">9:00am - 6:00pm</td>
+            </tr>
+            <tr class="bg-[#d6e8f5]">
+              <td class="py-2 px-2 lg:px4 lg:py-2">Monday - Friday</td>
+              <td class="py-2 px-2 lg:px4 lg:py-2">9:00am - 6:00pm</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="pt-4">
+                  <a
+                    href="#"
+                    class="
+                      text-center
+                      block
+                      w-full
+                      bg-green-500
+                      text-white
+                      px-2
+                      lg:px-6
+                      py-3
+                      rounded-md
+                      transition
+                      duration-300
+                      hover:bg-green-600
+                    "
+                  >
+                    <i class="fas fa-phone pr-2"></i>
+                    <span>Emergency Call 800-345-0089</span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="dental-services" class="py-12 bg-[#e5eff5]">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-2xl lg:text-5xl text-[#2a527b] mx-auto text-center pb-8"
+        >
+          Dental Services
+        </h2>
+        <p
+          class="
+            text-light
+            mx-auto
+            text-center text-[#212427]
+            pb-4
+            px-2
+            lg:px-8
+          "
+        >
+          At Dental Care, we've made sure that no matter what your dental needs
+          are, we can help. We have a large list of dental care services at our
+          Chicago, IL office that are designed to whiten, brighten, straighten,
+          and strengthen your beautiful smile.
+        </p>
+        <!-- Button for All Services -->
+        <div class="text-center pb-10">
+          <button
+            class="
+              bg-[#039db3]
+              text-white
+              px-8
+              py-2
+              rounded
+              transition
+              duration-300
+              hover:bg-[#03a7b3]
+            "
+          >
+            All Services
+          </button>
+        </div>
+
+        <!-- Two Rows of Three Column Boxes for Dental Services -->
+        <div
+          class="
+            mt-8
+            grid grid-cols-1
+            sm:grid-cols-2
+            md:grid-cols-2
+            lg:grid-cols-3
+            gap-8
+          "
+        >
+          <!-- First Row -->
+          <div
+            class="
+              group
+              block
+              bg-white
+              rounded-lg
+              overflow-hidden
+              transition
+              duration-300
+              ease-in-out
+              transform
+              hover:scale-105 hover:shadow-xl
+            "
+          >
+            <a href="#">
+              <img
+                src="img/dental-implant-services.webp"
+                alt="Dental Service 1"
+                class="w-full h-50 object-cover"
+              />
+              <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                  Dental Implants
+                </h2>
+                <p class="text-gray-600 mb-4">
+                  Dental implants are strong, durable, and natural-looking teeth
+                  replacements that can last for 20 years or more with the
+                  proper care. We offer dental implants for only $1500!
+                </p>
+                <button class="bg-[#039db3] text-white px-4 py-2 rounded">
+                  Learn More
+                </button>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="
+              group
+              block
+              bg-white
+              rounded-lg
+              overflow-hidden
+              transition
+              duration-300
+              ease-in-out
+              transform
+              hover:scale-105 hover:shadow-xl
+            "
+          >
+            <a href="#">
+              <img
+                src="img/denture-services.webp"
+                alt="Dental Service 2"
+                class="w-full h-50 object-cover"
+              />
+              <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                  Dentures
+                </h2>
+                <p class="text-gray-600 mb-4">
+                  Dentures are essentially false teeth that are custom made to
+                  fit your mouth perfectly. They can be used to replace a single
+                  tooth, multiple teeth, or even a full set of teeth.
+                </p>
+                <button class="bg-[#039db3] text-white px-4 py-2 rounded">
+                  Learn More
+                </button>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="
+              group
+              block
+              bg-white
+              rounded-lg
+              overflow-hidden
+              transition
+              duration-300
+              ease-in-out
+              transform
+              hover:scale-105 hover:shadow-xl
+            "
+          >
+            <a href="#">
+              <img
+                src="img/invisalign-services.webp"
+                alt="Dental Service 3"
+                class="w-full h-50 object-cover"
+              />
+              <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                  Invisalign®
+                </h2>
+                <p class="text-gray-600 mb-4">
+                  Invisalign® is clear, custom, plastic aligners created to
+                  align a patient's teeth over the span of a few months or
+                  years. This treatment is known to be a popular and effective
+                  solution!
+                </p>
+                <button class="bg-[#039db3] text-white px-4 py-2 rounded">
+                  Learn More
+                </button>
+              </div>
+            </a>
+          </div>
+
+          <!-- Second Row -->
+          <div
+            class="
+              group
+              block
+              bg-white
+              rounded-lg
+              overflow-hidden
+              transition
+              duration-300
+              ease-in-out
+              transform
+              hover:scale-105 hover:shadow-xl
+            "
+          >
+            <a href="#">
+              <img
+                src="img/dental-botox-services.webp"
+                alt="Dental Service 4"
+                class="w-full h-50 object-cover"
+              />
+              <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                  BOTOX® Dentistry
+                </h2>
+                <p class="text-gray-600 mb-4">
+                  BOTOX® dentistry is the use of botulinum toxin to temporarily
+                  reduce or eliminate wrinkles in the facial area. It can also
+                  be used to treat TMJ disorders and teeth grinding.
+                </p>
+                <button class="bg-[#039db3] text-white px-4 py-2 rounded">
+                  Learn More
+                </button>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="
+              group
+              block
+              bg-white
+              rounded-lg
+              overflow-hidden
+              transition
+              duration-300
+              ease-in-out
+              transform
+              hover:scale-105 hover:shadow-xl
+            "
+          >
+            <a href="#">
+              <img
+                src="img/emergency-dental-services.webp"
+                alt="Dental Service 5"
+                class="w-full h-50 object-cover"
+              />
+              <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                  Emergency Services
+                </h2>
+                <p class="text-gray-600 mb-4">
+                  There are a few different types of dental emergencies that
+                  require different types of treatment. If you have a tooth that
+                  has been knocked out or a toothache, come see us!
+                </p>
+                <button class="bg-[#039db3] text-white px-4 py-2 rounded">
+                  Learn More
+                </button>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="
+              group
+              block
+              bg-white
+              rounded-lg
+              overflow-hidden
+              transition
+              duration-300
+              ease-in-out
+              transform
+              hover:scale-105 hover:shadow-xl
+            "
+          >
+            <a href="#">
+              <img
+                src="img/dental-cosmetic-services.webp"
+                alt="Dental Service 6"
+                class="w-full h-50 object-cover"
+              />
+              <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                  Cosmetic Dentistry
+                </h2>
+                <p class="text-gray-600 mb-4">
+                  Cosmetic dentistry is about improving the function of your
+                  teeth in a way that also leaves your pearly whites looking
+                  bright and beautiful. From whitening to veneers, we do it all!
+                </p>
+                <button class="bg-[#039db3] text-white px-4 py-2 rounded">
+                  Learn More
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dental-office" class="py-20 md:py-24">
+      <div
+        class="
+          container
+          px-4
+          mx-auto
+          flex flex-col
+          md:flex-row
+          space-y-8
+          md:space-y-0
+        "
+      >
+        <!-- Left Column with Masonry Grid -->
+        <div class="md:w-1/2 space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <!-- Left Column -->
+            <div class="col-span-1">
+              <!-- Medium Image -->
+              <img
+                src="img/office-tour-1.webp"
+                alt="Medium Image"
+                class="w-full mb-4"
+              />
+
+              <!-- Small Image -->
+              <img
+                src="img/office-tour-2.webp"
+                alt="Small Image"
+                class="w-full"
+              />
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-span-1">
+              <!-- Large Image -->
+              <img
+                src="img/office-tour-3.webp"
+                alt="Large Image"
+                class="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column with Title, Description, and Button -->
+        <div
+          class="
+            md:w-1/2
+            flex flex-col
+            items-center
+            justify-center
+            md:pl-12
+            lg:pl-20
+          "
+        >
+          <div class="">
+            <h2 class="text-2xl lg:text-5xl font-bold pb-4 text-[#2a527b]">
+              TOUR OUR CHICAGO OFFICE
+            </h2>
+            <p class="text-[#212427] pb-4">
+              We invite you to tour Family Dental of Chicago online before
+              meeting with our dentists to receive treatment. Give us a call if
+              you have any questions!
+            </p>
+            <button
+              class="
+                bg-[#039db3]
+                text-white
+                px-6
+                py-3
+                rounded-md
+                hover:bg-[#03a7b3]
+                transition
+                duration-300
+                uppercase
+              "
+            >
+              Office Tour
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dental-team" class="">
+      <div
+        class="
+          relative
+          h-[70vh]
+          flex
+          justify-center
+          items-center
+          bg-cover bg-center
+        "
+        style="background-image: url('img/dental-office-bg.jpg')"
+      >
+        <!-- Light Overlay -->
+        <div
+          class="
+            absolute
+            inset-0
+            bg-[#F9F6EE]
+            opacity-80
+            md:opacity-60
+            lg:opacity-50
+          "
+        ></div>
+
+        <!-- Content Container -->
+        <div class="container mx-auto px-4 text-white z-10 pb-12">
+          <div class="w-full md:w-1/2">
+            <h1 class="text-2xl lg:text-5xl font-bold mb-4 text-[#2a527b]">
+              Our Dental Team
+            </h1>
+            <p class="text-lg mb-6 text-[#212427]">
+              Explore the heart of our practice in 'Meet Our Dental Team.' Get
+              to know the skilled and friendly professionals dedicated to your
+              oral health. From expert dentists to caring support staff, our
+              team is committed to your comfort and satisfaction. Discover the
+              faces behind your smiles!
+            </p>
+            <a
+              href="#"
+              class="
+                bg-[#039db3]
+                hover:bg-[#03a7b3]
+                text-white
+                font-bold
+                py-2
+                px-4
+                rounded
+              "
+              >Meet All Dentists</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4">
+        <!-- Three Overlapping Boxes/Columns -->
+        <div
+          class="
+            md:mt-[-20px]
+            lg:mt-[-100px]
+            relative
+            flex flex-wrap
+            md:flex-nowrap
+            justify-center
+            md:space-x-4
+          "
+        >
+          <!-- Team Member 1 -->
+          <div
+            class="
+              relative
+              bg-gray-200
+              w-full
+              md:w-4/12
+              lg:w-1/3
+              mb-4
+              rounded-t-lg rounded-b-none
+              shadow
+              overflow-hidden
+            "
+          >
+            <div class="rounded-t-lg rounded-b-none overflow-hidden">
+              <img
+                src="img/dentist-1.jpg"
+                alt="Team Member 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Info Section -->
+            <div class="bg-white p-4 border border-gray-300 shadow-md">
+              <h2 class="text-lg text-black font-bold mb-2">
+                Dr. Johnny Little
+              </h2>
+              <p class="text-sm mb-2">General Dentist</p>
+              <!-- Social Media Icons -->
+              <div class="flex space-x-2">
+                <a href="#" class="text-[#2a527b] hover:text-[#039db3]">
+                  <!-- Your Social Media Icon 1 -->
+                  <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="text-[#2a527b] hover:text-[#039db3]">
+                  <!-- Your Social Media Icon 2 -->
+                  <i class="fab fa-twitter-square text-2xl"></i>
+                </a>
+                <a href="#" class="text-[#2a527b] hover:text-[#039db3]">
+                  <!-- Your Social Media Icon 3 -->
+                  <i class="fab fa-instagram-square text-2xl"></i>
+                </a>
+                <!-- Add more social media icons as needed -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div
+            class="
+              relative
+              bg-gray-200
+              w-full
+              md:w-4/12
+              lg:w-1/3
+              mb-4
+              shadow
+              rounded-t-lg rounded-b-none
+              overflow-hidden
+            "
+          >
+            <div class="rounded-t-lg rounded-b-none overflow-hidden">
+              <img
+                src="img/dentist-2.jpg"
+                alt="Team Member 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Info Section -->
+            <div class="bg-white p-4 border border-gray-300 shadow-md">
+              <h2 class="text-lg text-black font-bold mb-2">
+                Dr. Vincent Smith
+              </h2>
+              <p class="text-sm mb-2">Orthodontist</p>
+              <!-- Social Media Icons -->
+              <div class="flex space-x-2">
+                <a href="#" class="text-[#2a527b] hover:text-[#039db3]">
+                  <!-- Your Social Media Icon 1 -->
+                  <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="text-[#2a527b] hover:text-[#039db3]">
+                  <!-- Your Social Media Icon 2 -->
+                  <i class="fab fa-twitter-square text-2xl"></i>
+                </a>
+                <a href="#" class="text-[#2a527b] hover:text-[#039db3]">
+                  <!-- Your Social Media Icon 3 -->
+                  <i class="fab fa-instagram-square text-2xl"></i>
+                </a>
+                <!-- Add more social media icons as needed -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div
+            class="
+              relative
+              bg-gray-200
+              w-full
+              md:w-4/12
+              lg:w-1/3
+              mb-4
+              shadow
+              rounded-t-lg rounded-b-none
+              overflow-hidden
+            "
+          >
+            <div class="rounded-t-lg rounded-b-none overflow-hidden">
+              <img
+                src="img/dentist-3.jpg"
+                alt="Team Member 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Info Section -->
+            <div class="bg-white p-4 border border-gray-300 shadow-md">
+              <h2 class="text-lg text-black font-bold mb-2">Dr. Sarah Lee</h2>
+              <p class="text-sm mb-2">Cosmetic Dentist</p>
+              <!-- Social Media Icons -->
+              <div class="flex space-x-2">
+                <a href="#" class="text-[#2a527b] hover:text-[#039db3]">
+                  <!-- Your Social Media Icon 1 -->
+                  <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="text-[#2a527b] hover:text-[#039db3]">
+                  <!-- Your Social Media Icon 2 -->
+                  <i class="fab fa-twitter-square text-2xl"></i>
+                </a>
+                <a href="#" class="text-[#2a527b] hover:text-[#039db3]">
+                  <!-- Your Social Media Icon 3 -->
+                  <i class="fab fa-instagram-square text-2xl"></i>
+                </a>
+                <!-- Add more social media icons as needed -->
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 3 End -->
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonals" class="py-8 md:py-12 lg:py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl lg:text-5xl text-center text-[#2a527b] pb-8">
+          What Our Satisfied Patients Have To Say
+        </h2>
+        <div class="flex flex-wrap gap-4 testimonial-carousel">
+          <!-- Testimonal Card 1 - start -->
+          <div
+            class="
+              flex-1
+              bg-white
+              p-4
+              rounded
+              shadow-md
+              ring-2 ring-gray-300
+              text-center
+            "
+          >
+            <div class="rounded-full inline-block overflow-hidden">
+              <img
+                src="img/testimonal-pic1.jpg"
+                alt="Testimonial 1"
+                class="w-16 h-16 object-cover"
+              />
+            </div>
+            <h2 class="text-lg font-semibold">John Doe</h2>
+            <div>
+              <!-- 5 Star Icons -->
+              <div class="mt-2">
+                <!-- Add your star icons here -->
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+              </div>
+              <!-- Testimonial Paragraph -->
+              <p class="mt-2 text-[#212427]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonal Card 1 - end -->
+
+          <!-- Testimonal Card 2 - start -->
+          <div
+            class="
+              flex-1
+              bg-white
+              p-4
+              rounded
+              shadow-md
+              ring-2 ring-gray-300
+              text-center
+            "
+          >
+            <div class="rounded-full inline-block overflow-hidden">
+              <img
+                src="img/testimonal-pic2.jpg"
+                alt="Testimonial 1"
+                class="w-16 h-16 object-cover"
+              />
+            </div>
+            <h2 class="text-lg font-semibold">Jane Doe</h2>
+            <div>
+              <!-- 5 Star Icons -->
+              <div class="mt-2">
+                <!-- Add your star icons here -->
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+              </div>
+              <!-- Testimonial Paragraph -->
+              <p class="mt-2 text-[#212427]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonal Card 2 - end -->
+
+          <!-- Testimonal Card 3 - start -->
+          <div
+            class="
+              flex-1
+              bg-white
+              p-4
+              rounded
+              shadow-md
+              ring-2 ring-gray-300
+              text-center
+            "
+          >
+            <div class="rounded-full inline-block overflow-hidden">
+              <img
+                src="img/testimonal-pic3.jpg"
+                alt="Testimonial 1"
+                class="w-16 h-16 object-cover"
+              />
+            </div>
+            <h2 class="text-lg font-semibold">Liam Parker</h2>
+            <div>
+              <!-- 5 Star Icons -->
+              <div class="mt-2">
+                <!-- Add your star icons here -->
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+              </div>
+              <!-- Testimonial Paragraph -->
+              <p class="mt-2 text-[#212427]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonal Card 3 - end -->
+
+          <!-- Testimonal Card 4 - start -->
+          <div
+            class="
+              flex-1
+              bg-white
+              p-4
+              rounded
+              shadow-md
+              ring-2 ring-gray-300
+              text-center
+            "
+          >
+            <div class="rounded-full inline-block overflow-hidden">
+              <img
+                src="img/testimonal-pic4.jpg"
+                alt="Testimonial 1"
+                class="w-16 h-16 object-cover"
+              />
+            </div>
+            <h2 class="text-lg font-semibold">Isabella Taylor</h2>
+            <div>
+              <!-- 5 Star Icons -->
+              <div class="mt-2">
+                <!-- Add your star icons here -->
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+              </div>
+              <!-- Testimonial Paragraph -->
+              <p class="mt-2 text-[#212427]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonal Card 4 - end -->
+
+          <!-- Testimonal Card 5 - start -->
+          <div
+            class="
+              flex-1
+              bg-white
+              p-4
+              rounded
+              shadow-md
+              ring-2 ring-gray-300
+              text-center
+            "
+          >
+            <div class="rounded-full inline-block overflow-hidden">
+              <img
+                src="img/testimonal-pic5.jpg"
+                alt="Testimonial 1"
+                class="w-16 h-16 object-cover"
+              />
+            </div>
+            <h2 class="text-lg font-semibold">Olivia Rodriguez</h2>
+            <div>
+              <!-- 5 Star Icons -->
+              <div class="mt-2">
+                <!-- Add your star icons here -->
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+                <span class="text-yellow-500">&#9733;</span>
+              </div>
+              <!-- Testimonial Paragraph -->
+              <p class="mt-2 text-[#212427]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonal Card 5 - end -->
+        </div>
+      </div>
+    </section>
+
+    <section class="dental-consultation lg:relative lg:h-[100vh]">
+      <div class="lg:absolute lg:inset-0 flex">
+        <div
+          class="w-full h-full bg-cover bg-center hidden lg:block lg:w-1/2"
+          style="background-image: url('img/dental-cleaning-bg.webp')"
+        ></div>
+        <div
+          class="
+            w-full
+            lg:w-1/2
+            h-full
+            bg-[rgba(236,236,236,1)]
+            block
+            md:flex
+            items-center
+            justify-center
+          "
+        >
+          <div class="flex flex-wrap lg:mr-[75px] lg:ml-[-75px] mx-4">
+            <!-- First Card -->
+            <div class="w-full md:w-1/2 lg:w-1/2 px-4 mb-8 mt-8 lg:mt-0">
+              <div
+                class="
+                  bg-[#2a527b]
+                  p-6
+                  rounded-lg
+                  shadow
+                  flex flex-col
+                  items-center
+                "
+              >
+                <div class="text-4xl text-white mb-4">
+                  <i class="fa-solid fa-teeth-open"></i>
+                </div>
+                <h3 class="text-xl text-white font-semibold mb-2">
+                  Digital Impressions
+                </h3>
+                <p class="text-white text-center">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Velit eos saepe aliquid amet ipsam dicta animi dignissimos
+                  rerum.
+                </p>
+              </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="w-full md:w-1/2 lg:w-1/2 px-4 mb-8 md:mt-8 lg:mt-0">
+              <div
+                class="
+                  bg-[#2a527b]
+                  p-6
+                  rounded-lg
+                  shadow
+                  flex flex-col
+                  items-center
+                "
+              >
+                <div class="text-4xl text-white mb-4">
+                  <i class="fa-solid fa-message"></i>
+                </div>
+                <h3 class="text-xl text-white font-semibold mb-2">
+                  Multilingual Staff
+                </h3>
+                <p class="text-white text-center">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Velit eos saepe aliquid amet ipsam dicta animi dignissimos
+                  rerum.
+                </p>
+              </div>
+            </div>
+
+            <!-- Third Card -->
+            <div class="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
+              <div
+                class="
+                  bg-[#2a527b]
+                  p-6
+                  rounded-lg
+                  shadow
+                  flex flex-col
+                  items-center
+                "
+              >
+                <div class="text-4xl text-white mb-4">
+                  <i class="fas fa-user"></i>
+                </div>
+                <h3 class="text-xl text-white font-semibold mb-2">
+                  Free Consultations
+                </h3>
+                <p class="text-white text-center">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Velit eos saepe aliquid amet ipsam dicta animi dignissimos
+                  rerum.
+                </p>
+              </div>
+            </div>
+
+            <!-- Fourth Card -->
+            <div class="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
+              <div
+                class="
+                  bg-[#2a527b]
+                  p-6
+                  rounded-lg
+                  shadow
+                  flex flex-col
+                  items-center
+                "
+              >
+                <div class="text-4xl text-white mb-4">
+                  <i class="fas fa-dollar"></i>
+                </div>
+                <h3 class="text-xl text-white font-semibold mb-2">
+                  Financing Available
+                </h3>
+                <p class="text-white text-center">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Velit eos saepe aliquid amet ipsam dicta animi dignissimos
+                  rerum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog">
+      <div class="container mx-auto px-4"></div>
+    </section>
+
+    <section id="blog" class="container mx-auto px-4 py-8 md:py-12 lg:py-20">
+      <h2 class="text-2xl lg:text-5xl text-[#2a527b] text-center pb-12">
+        Learn More About Dental Procedures and Hygiene
+      </h2>
+      <div class="flex flex-wrap -mx-4">
+        <!-- Blog Post 1 -->
+
+        <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+          <div
+            class="
+              group
+              block
+              bg-white
+              rounded-lg
+              overflow-hidden
+              transition
+              shadow-md
+              duration-300
+              ease-in-out
+              transform
+              hover:scale-105 hover:shadow-xl
+            "
+          >
+            <a href="#">
+              <img
+                src="img/dental-tools-blog.webp"
+                alt="Blog Post 1"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <div class="text-xl font-bold mb-2">
+                  4 Important Benefits of Preventative Dentistry
+                </div>
+                <p class="text-gray-700">
+                  This is a short excerpt of Blog Post 1. It provides a brief
+                  summary of the content.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Blog Post 2 -->
+        <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+          <div
+            class="
+              group
+              block
+              bg-white
+              rounded-lg
+              overflow-hidden
+              transition
+              duration-300
+              shadow-md
+              ease-in-out
+              transform
+              hover:scale-105 hover:shadow-xl
+            "
+          >
+            <a href="#">
+              <img
+                src="img/dental-implants-blog.webp"
+                alt="Blog Post 2"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <div class="text-xl font-bold mb-2">
+                  Missing Teeth? Learn More About Dental Implants
+                </div>
+                <p class="text-gray-700">
+                  Here is a brief overview of Blog Post 2. It highlights the key
+                  points of the post content.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+          <div
+            class="
+              group
+              block
+              bg-white
+              rounded-lg
+              overflow-hidden
+              transition
+              duration-300
+              shadow-md
+              ease-in-out
+              transform
+              hover:scale-105 hover:shadow-xl
+            "
+          >
+            <a href="#">
+              <img
+                src="img/dental-implants-2-blog.webp"
+                alt="Blog Post 3"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <div class="text-xl font-bold mb-2">
+                  The Pros and Cons of Dental Implants
+                </div>
+                <p class="text-gray-700">
+                  Read about the interesting details in Blog Post 3. The excerpt
+                  gives you a glimpse into the content.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+          <div
+            class="
+              group
+              block
+              bg-white
+              rounded-lg
+              overflow-hidden
+              transition
+              duration-300
+              shadow-md
+              ease-in-out
+              transform
+              hover:scale-105 hover:shadow-xl
+            "
+          >
+            <a href="#">
+              <img
+                src="img/dental-healing-blog.webp"
+                alt="Blog Post 4"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <div class="text-xl font-bold mb-2">
+                  5 Tips to Speed Up Healing After Bone Grafts
+                </div>
+                <p class="text-gray-700">
+                  Explore the content of Blog Post 4 with this short excerpt.
+                  Find out more about the topic discussed.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- View All Blog Posts Button -->
+      <div class="w-full px-4 text-center mt-8">
+        <a
+          href="#"
+          class="
+            bg-[#039db3]
+            text-white
+            px-8
+            py-2
+            rounded
+            transition
+            duration-300
+            hover:bg-[#03a7b3]
+          "
+        >
+          View All Blog Posts
+        </a>
+      </div>
+    </section>
+
+    <footer id="footer" class="bg-[#2a527b] text-white py-12">
+      <div class="container mx-auto px-4 flex flex-wrap justify-between">
+        <!-- Column 1: Logo and Social Media Links -->
+        <div class="w-full md:w-1/4 mb-6 md:mb-0">
+          <div class="flex items-center mb-4">
+            <!-- <img src="logo.png" alt="Logo" class="w-8 h-8 mr-2"> -->
+            <span class="text-xl font-bold">DENTAL CARE</span>
+          </div>
+          <div class="flex space-x-4">
+            <!-- Replace the social media links with your actual links -->
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition duration-300"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition duration-300"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition duration-300"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition duration-300"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Links -->
+        <div class="w-full md:w-1/4 mb-6 md:mb-0">
+          <h3 class="text-lg font-semibold mb-4">Useful Links</h3>
+          <ul>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Links -->
+        <div class="w-full md:w-1/4 mb-6 md:mb-0">
+          <h3 class="text-lg font-semibold mb-4">Resources</h3>
+          <ul>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >Downloads</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >FAQs</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >Support</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Links -->
+        <div class="w-full md:w-1/4">
+          <h3 class="text-lg font-semibold mb-4">Connect</h3>
+          <ul>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >Newsletter</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >Careers</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition duration-300"
+                >Partners</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.tsx"></script>
+    <script
+      type="text/javascript"
+      src="node_modules/jquery/dist/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="node_modules/slick-carousel/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="src/assets/js/script.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".testimonial-carousel").slick({
+          dots: true,
+          arrows: true,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          autoplay: false,
+          autoplaySpeed: 3000,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
